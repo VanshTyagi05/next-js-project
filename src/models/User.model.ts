@@ -30,7 +30,7 @@ export interface User extends Document{
   verifyCodeExpiry:Date;
   isVerified:boolean;
   isAcceptingMessage:boolean;
-  message:Message;
+  message:Message[];
 
 }
 

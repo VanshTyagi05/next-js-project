@@ -50,6 +50,8 @@ export async function GET(request: Request) {
       return Response.json({
         success: false,
         message: "Usernamem is already taken",
+      },{
+        status:405
       });
     }
     return Response.json({
