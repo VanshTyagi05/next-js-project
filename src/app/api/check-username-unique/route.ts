@@ -47,16 +47,19 @@ export async function GET(request: Request) {
     });
 
     if (existingUserVerified) {
-      return Response.json({
-        success: false,
-        message: "Usernamem is already taken",
-      },{
-        status:405
-      });
+      return Response.json(
+        {
+          success: false,
+          message: "Username is already taken",
+        },
+        {
+          status: 405,
+        }
+      );
     }
     return Response.json({
       success: true,
-      message: "Usernamem is unique",
+      message: "Username is unique",
     });
   } catch (error) {
     console.error("Error Checking Username", error);
